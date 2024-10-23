@@ -1,2 +1,5 @@
 com\mycompany\javaiifinalproject\JakartaRestConfiguration.class
+music\data\ProductIO.class
+servlets\ProductServlet.class
 com\mycompany\javaiifinalproject\resources\JakartaEE10Resource.class
+music\business\Product.class
