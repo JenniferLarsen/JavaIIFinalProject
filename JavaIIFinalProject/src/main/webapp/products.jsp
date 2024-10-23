@@ -21,15 +21,22 @@
         </tr>
         <%
             List<Product> products = (List<Product>) request.getAttribute("products");
-            for (Product product : products) {
+            if (products != null) {
+                for (Product product : products) {
         %>
         <tr>
             <td><%= product.getCode() %></td>
             <td><%= product.getDescription() %></td>
             <td><%= product.getPriceFormatted() %></td>
         </tr>
+        <% 
+                }
+            } else { 
+        %>
+        <tr>
+            <td colspan="3">No products available.</td>
+        </tr>
         <% } %>
     </table>
 </body>
-</html>
 </html>

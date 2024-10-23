@@ -1,19 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package servlets;
-
 /**
  *
  * @author djlar
  */
 
+package servlets;
+
 import java.io.IOException;
 import java.util.List;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import jakarta.servlet.ServletException;  // Update from javax to jakarta
+import jakarta.servlet.annotation.WebServlet; // Update from javax to jakarta
+import jakarta.servlet.http.*; // Update from javax to jakarta
 import music.business.Product;
 import music.data.ProductIO;
 

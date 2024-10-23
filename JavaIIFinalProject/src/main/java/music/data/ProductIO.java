@@ -1,21 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package music.data;
-
 /**
- *
  * @author djlar
  */
-
+package music.data;
 import java.io.*;
 import java.util.*;
 import music.business.Product;
 
 public class ProductIO {
 
-    private static String filePath = "/WEB-INF/products.txt";
+    private static String filePath = "../WEB-INF/products.txt";
     private static List<Product> products = null;
 
     public static void init(String path) {
