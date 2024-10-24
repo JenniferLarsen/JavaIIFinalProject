@@ -30,10 +30,10 @@
            value="${product.price}"/>
   </p>
  
-  <p><input type="submit" value="Update Product" id="updateProduct"  />
+  <p><input type="submit" value="Update Product" id="updateProduct" onClick ="updateProduct();" />
   </p><br></br>
   
-  <p><input type="submit" value="View Product" id="viewProduct" />
+  <p><input type="submit" value="View Product" id="viewProduct" onClick="/products"/>
   </p>
 </form>
     </body>
