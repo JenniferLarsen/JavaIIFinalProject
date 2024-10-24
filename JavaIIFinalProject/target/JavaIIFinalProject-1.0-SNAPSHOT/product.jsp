@@ -5,7 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
- <link href="/product.url">
 
 <!DOCTYPE html>
 <html>
