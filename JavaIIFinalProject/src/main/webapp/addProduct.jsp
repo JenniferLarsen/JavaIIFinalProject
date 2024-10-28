@@ -8,6 +8,7 @@
 <html>
 <head>
     <title>Add Product</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Add New Product</h1>
