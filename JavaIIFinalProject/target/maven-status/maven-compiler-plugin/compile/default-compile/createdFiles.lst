@@ -6,5 +6,6 @@ music\business\Product.class
 music\data\ProductIO.class
 servlets\AddProductServlet.class
 servlets\ProductServlet.class
+com\mycompany\javaiifinalproject\validationTags\RequiredFieldTag.class
 servlets\UpdateProductServlet.class
 com\mycompany\javaiifinalproject\resources\JakartaEE10Resource.class
