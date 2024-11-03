@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Edit Product</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Edit Product</h1>

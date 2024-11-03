@@ -24,8 +24,8 @@
             <li>
                 <a href="#">Products</a>
                 <ul class="dropdown">
-                    <li><a href="products.jsp">View Products</a></li>
-                    <li><a href="product.jsp">Add Product</a></li>
+                    <li><a href="products">View Products</a></li>
+                    <li><a href="addProduct.jsp">Add Product</a></li>
                 </ul>
             </li>
         </ul>
