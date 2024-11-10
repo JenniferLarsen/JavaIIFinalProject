@@ -1,2 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context path="/JavaIIFinalProject"/>
+<Context path="/JavaIIFinalProject">
+    <Resource name="jdbc/music"
+              auth="Container"
+              driverClassName="com.mysql.jdbc.Driver"
+              username="andrea"
+              password="sesame"                     
+              type="javax.sql.DataSource"
+              maxTotal="100"
+              maxIdle="30"
+              maxWaitMillis="10000"
+              url="jdbc:mysql://localhost:3306/create_library_database"/>
+</Context>
