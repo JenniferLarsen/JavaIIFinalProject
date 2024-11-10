@@ -1,11 +1,13 @@
 com\mycompany\javaiifinalproject\JakartaRestConfiguration.class
 servlets\DeleteProductServlet.class
 servlets\NewServlet.class
-servlets\EditProductServlet.class
 music\business\Product.class
-music\data\ProductIO.class
 servlets\AddProductServlet.class
 servlets\ProductServlet.class
+music\data\ConnectionPool.class
+music\data\ProductDB.class
+servlets\EditProductServlet.class
+music\data\ProductIO.class
 com\mycompany\javaiifinalproject\validationTags\RequiredFieldTag.class
 servlets\UpdateProductServlet.class
 com\mycompany\javaiifinalproject\resources\JakartaEE10Resource.class
