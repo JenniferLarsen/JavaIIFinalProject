@@ -39,6 +39,6 @@
     <%
         }
     %>
-    <a href="products.jsp">Back to Product List</a>
+    <a href="products">Back to Product List</a>
 </body>
 </html>
