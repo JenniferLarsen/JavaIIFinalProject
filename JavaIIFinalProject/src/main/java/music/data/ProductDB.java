@@ -7,81 +7,92 @@ package music.data;
 /**
  *
  * @author 1elli
+ *
+ * Modifications:
+ * - Replaced JDBC code with JPA operations for database interactions.
+ * - Added an EntityManagerFactory to manage entity managers.
+ * - Replaced connection handling with JPA EntityManager and EntityTransaction.
+ * - Removed old JDBC connection pool and connection management code.
+ * - Used JPA queries and methods to add, update, and delete products.
  */
 
-
-import java.sql.*;
-import java.util.ArrayList;
+import javax.persistence.*;
 import java.util.List;
 import music.business.Product;
 
 public class ProductDB {
 
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/musicone";
-    private static final String USER = "andrea";
-    private static final String PASSWORD = "sesame";
-
-    public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(DB_URL, USER, PASSWORD);
-    }
-
+    // Create an EntityManagerFactory to handle EntityManager instances
+    private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("ProductPU");
+    
+    // Method to get all products from the database using JPA
     public static List<Product> getAllProducts() {
-        List<Product> products = new ArrayList<>();
-        String sql = "SELECT * FROM Products";
-        try (Connection conn = getConnection();
-             Statement stmt = conn.createStatement();
-             ResultSet rs = stmt.executeQuery(sql)) {
-
-            while (rs.next()) {
-                Product product = new Product();
-                product.setCode(rs.getString("Code"));
-                product.setDescription(rs.getString("Description"));
-                product.setPrice(rs.getDouble("Price"));
-                products.add(product);
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        EntityManager em = emf.createEntityManager();
+        List<Product> products = null;
+        try {
+            // Use JPA to execute a query and retrieve products
+            products = em.createQuery("SELECT p FROM Product p", Product.class).getResultList();
+        } finally {
+            // Ensure the EntityManager is closed after use
+            em.close();
         }
         return products;
     }
 
+    // Method to add a product to the database using JPA
     public static void addProduct(Product product) {
-        String sql = "INSERT INTO Products (Code, Description, Price) VALUES (?, ?, ?)";
-        try (Connection conn = getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setString(1, product.getCode());
-            pstmt.setString(2, product.getDescription());
-            pstmt.setDouble(3, product.getPrice());
-            pstmt.executeUpdate();
-        } catch (SQLException e) {
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        try {
+            trans.begin(); // Begin transaction
+            em.persist(product); // Persist the product entity
+            trans.commit(); // Commit transaction
+        } catch (Exception e) {
+            if (trans.isActive()) {
+                trans.rollback(); // Roll back if an error occurs
+            }
             e.printStackTrace();
+        } finally {
+            em.close(); // Close EntityManager
         }
     }
 
+    // Method to update an existing product in the database using JPA
     public static void updateProduct(Product product) {
-        String sql = "UPDATE Products SET Description = ?, Price = ? WHERE Code = ?";
-        try (Connection conn = getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setString(1, product.getDescription());
-            pstmt.setDouble(2, product.getPrice());
-            pstmt.setString(3, product.getCode());
-            pstmt.executeUpdate();
-        } catch (SQLException e) {
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        try {
+            trans.begin(); // Begin transaction
+            em.merge(product); // Merge the product entity to update it
+            trans.commit(); // Commit transaction
+        } catch (Exception e) {
+            if (trans.isActive()) {
+                trans.rollback(); // Roll back if an error occurs
+            }
             e.printStackTrace();
+        } finally {
+            em.close(); // Close EntityManager
         }
     }
 
+    // Method to delete a product from the database by product code using JPA
     public static void deleteProduct(String productCode) {
-        String sql = "DELETE FROM Products WHERE Code = ?";
-        try (Connection conn = getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setString(1, productCode);
-            pstmt.executeUpdate();
-        } catch (SQLException e) {
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        try {
+            trans.begin(); // Begin transaction
+            Product product = em.find(Product.class, productCode); // Find the product by code
+            if (product != null) {
+                em.remove(product); // Remove the product entity if found
+            }
+            trans.commit(); // Commit transaction
+        } catch (Exception e) {
+            if (trans.isActive()) {
+                trans.rollback(); // Roll back if an error occurs
+            }
             e.printStackTrace();
+        } finally {
+            em.close(); // Close EntityManager
         }
     }
 }
