@@ -25,6 +25,12 @@
             <version>6.0.0</version> <!-- Ensure version is compatible with Tomcat -->
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.guicedee.services</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>1.0.20.2-jre15</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
     
     <build>
