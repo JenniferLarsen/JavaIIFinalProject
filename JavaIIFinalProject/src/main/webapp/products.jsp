@@ -6,12 +6,10 @@
 <%@ page import="music.business.Product" %>
 <%@ page import="java.util.List" %>
 <html>
-    <head>
         <title>Product List</title>
         <link rel="stylesheet" href="styles.css">
         <a href="index.jsp">Home</a>
-    </head>
-    <body>
+ 
         <h1>Products</h1>
 
         <table border="1">
