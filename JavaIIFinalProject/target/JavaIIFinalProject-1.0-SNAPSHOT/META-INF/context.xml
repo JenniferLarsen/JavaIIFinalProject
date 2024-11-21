@@ -9,5 +9,15 @@
               maxTotal="100"
               maxIdle="30"
               maxWaitMillis="10000"
-              url="jdbc:mysql://localhost:3306/create_library_database"/>
+              url="jdbc:mysql://localhost:3306/music_jpa"/>
+              <!--changed create_library_database to music_jpa-->
+     <!-- Define the Realm -->
+    <Realm className="org.apache.catalina.realm.DataSourceRealm"/>
+           dataSourceName="jdbc/music_jpa"<!--changed music to music_jpa-->
+           userTable="UserPass"
+           userNameCol="username"
+           userCredCol="password"
+           userRoleTable="UserRole"
+           roleNameCol="role_name"/>
+    
 </Context>
