@@ -1,12 +1,13 @@
 C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\music\business\Product.java
+C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\music\data\ConnectionPool.java
 C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\music\data\ProductIO.java
+C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\servlets\DeleteProductServlet.java
+C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\com\mycompany\javaiifinalproject\JakartaRestConfiguration.java
+C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\music\data\ProductDB.java
+C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\com\mycompany\javaiifinalproject\resources\JakartaEE10Resource.java
 C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\com\mycompany\javaiifinalproject\validationTags\RequiredFieldTag.java
 C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\servlets\AddProductServlet.java
-C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\servlets\DeleteProductServlet.java
 C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\servlets\ProductServlet.java
-C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\com\mycompany\javaiifinalproject\JakartaRestConfiguration.java
 C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\servlets\EditProductServlet.java
-C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\music\data\ProductDB.java
 C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\servlets\UpdateProductServlet.java
-C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\com\mycompany\javaiifinalproject\resources\JakartaEE10Resource.java
 C:\Users\djlar\JavaIIFinalProject\JavaIIFinalProject\src\main\java\servlets\NewServlet.java
