@@ -9,7 +9,7 @@
             30
         </session-timeout>
     </session-config>
-
+    
     <!-- Security roles -->
     <security-role>
         <role-name>programmer</role-name>
@@ -26,6 +26,9 @@
             <url-pattern>/login.jsp</url-pattern>
             <url-pattern>/login-error.jsp</url-pattern>
         </web-resource-collection>
+         <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
     </security-constraint>
 
     <!-- Restrict access to all other pages -->
