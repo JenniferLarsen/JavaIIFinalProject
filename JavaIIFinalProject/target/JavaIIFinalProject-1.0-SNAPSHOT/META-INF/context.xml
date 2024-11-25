@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context path="/JavaIIFinalProject">
-    <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxIdle="30" maxTotal="100" maxWaitMillis="10000" name="jdbc/music" password="sesame" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/music_jpa" username="andrea"/>
+    <Resource name="jdbc/music"
+              auth="Container"
+              driverClassName="com.mysql.jdbc.Driver"
+              username="root"
+              password="sesame"                     
+              type="javax.sql.DataSource"
+              maxTotal="100"
+              maxIdle="30"
+              maxWaitMillis="10000"
+              url="jdbc:mysql://localhost:3306/music_jpa"/>
+              <!--changed create_library_database to music_jpa-->    
 </Context>
