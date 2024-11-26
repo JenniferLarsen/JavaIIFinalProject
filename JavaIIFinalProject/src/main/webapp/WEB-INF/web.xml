@@ -23,6 +23,7 @@
             <web-resource-name>Public Pages</web-resource-name>
             <url-pattern>/index.jsp</url-pattern>
             <url-pattern>/login.jsp</url-pattern>
+            <url-pattern>/styles.css</url-pattern>
             <url-pattern>/login-error.jsp</url-pattern>
         </web-resource-collection>
          <user-data-constraint>
