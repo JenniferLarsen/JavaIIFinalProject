@@ -8,7 +8,6 @@
             30
         </session-timeout>
     </session-config>
-<<<<<<< HEAD
     
     <!-- Security roles -->
     <security-role>
@@ -52,6 +51,4 @@
             <form-error-page>/login-error.jsp</form-error-page>
         </form-login-config>
     </login-config>
-=======
->>>>>>> parent of 4243aa4 (ellis commit milestone 5)
 </web-app>

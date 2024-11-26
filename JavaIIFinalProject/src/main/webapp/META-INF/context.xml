@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context path="/JavaIIFinalProject">
-<<<<<<< HEAD
-    <Resource auth="Container" driverClassName="com.mysql.jdbc.Driver" maxIdle="30" maxTotal="100" maxWaitMillis="10000" name="jdbc/music" password="sesame" type="javax.sql.DataSource" url="jdbc:mysql://localhost:3306/music_jpa" username="andrea"/>
-              <!--changed create_library_database to music_jpa-->
-     <!-- Define the Realm -->
-    <Realm className="org.apache.catalina.realm.DataSourceRealm"/>
-           dataSourceName="jdbc/music_jpa"<!--changed music to music_jpa-->
-           userTable="UserPass"
-           userNameCol="username"
-           userCredCol="password"
-           userRoleTable="UserRole"
-           roleNameCol="role_name"/&gt;
+
+    <Resource
+        auth="Container"
+        driverClassName="com.mysql.jdbc.Driver"
+        maxIdle="30"
+        maxTotal="100"
+        maxWaitMillis="10000"
+        name="jdbc/music"
+        password="sesame"
+        type="javax.sql.DataSource"
+        url="jdbc:mysql://localhost:3306/music_jpa"
+        username="andrea" />
     
+    <!-- Define the Realm -->
+    <Realm
+        className="org.apache.catalina.realm.DataSourceRealm"
+        dataSourceName="jdbc/music"
+        userTable="UserPass"
+        userNameCol="username"
+        userCredCol="password"
+        userRoleTable="UserRole"
+        roleNameCol="role_name" />
+
 </Context>
-=======
-    <Resource name="jdbc/music"
-              auth="Container"
-              driverClassName="com.mysql.jdbc.Driver"
-              username="andrea"
-              password="sesame"                     
-              type="javax.sql.DataSource"
-              maxTotal="100"
-              maxIdle="30"
-              maxWaitMillis="10000"
-              url="jdbc:mysql://localhost:3306/create_library_database"/>
-</Context>
->>>>>>> parent of 4243aa4 (ellis commit milestone 5)
