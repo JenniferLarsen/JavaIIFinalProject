@@ -4,7 +4,6 @@ servlets\NewServlet.class
 music\business\Product.class
 servlets\AddProductServlet.class
 servlets\ProductServlet.class
-music\data\ConnectionPool.class
 music\data\ProductDB.class
 servlets\EditProductServlet.class
 music\data\ProductIO.class

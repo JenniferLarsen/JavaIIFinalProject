@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context path="/JavaIIFinalProject">
-    <Resource name="jdbc/music"
-              auth="Container"
-              driverClassName="com.mysql.jdbc.Driver"
-              username="andrea"
-              password="sesame"                     
-              type="javax.sql.DataSource"
-              maxTotal="100"
-              maxIdle="30"
-              maxWaitMillis="10000"
-              url="jdbc:mysql://localhost:3306/create_library_database"/>
+
+    <Resource
+        auth="Container"
+        driverClassName="com.mysql.jdbc.Driver"
+        maxIdle="30"
+        maxTotal="100"
+        maxWaitMillis="10000"
+        name="jdbc/music_jpa"
+        password="sesame"
+        type="javax.sql.DataSource"
+        url="jdbc:mysql://localhost:3306/music_jpa"
+        username="root" />
+    
+    <!-- Define the Realm -->
+    <Realm
+        className="org.apache.catalina.realm.DataSourceRealm"
+        dataSourceName="jdbc/music_jpa"
+        userTable="UserPass"
+        userNameCol="Username"
+        userCredCol="Password"
+        userRoleTable="UserRole"
+        roleNameCol="Rolename" />
+
 </Context>
